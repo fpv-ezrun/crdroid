@@ -1,0 +1,35 @@
+Unofficial LineageOS 23.0 for Samsung Galaxy Tab A 10.5 (2018) WiFi
+===========
+
+How to build
+---------------
+- Follow the official LineageOS wiki for setting up the build environment up to the *Initialize the LineageOS source repository* section: https://wiki.lineageos.org/devices/husky/build/
+
+- Clone LineageOS sources:
+
+```
+    repo init -u https://github.com/UDPSendToFailed/android.git -b lineage-23.0 --git-lfs
+    repo sync
+```
+
+- Create folders for the device-specific sources and clone them:
+
+```
+    mkdir -p device/samsung/gta2xlwifi
+    git clone https://github.com/UDPSendToFailed/android_device_samsung_gta2xlwifi.git -b lineage-23.0 device/samsung/gta2xlwifi/
+    
+    mkdir -p kernel/samsung/gta2xlwifi
+    git clone https://github.com/UDPSendToFailed/android_kernel_samsung_gta2xlwifi.git -b lineage-23.0 kernel/samsung/gta2xlwifi/
+    
+    mkdir -p vendor/samsung
+    git clone https://github.com/UDPSendToFailed/proprietary_vendor_samsung.git -b lineage-23.0 vendor/samsung/
+```
+
+- Build the ROM:
+
+```
+    . build/envsetup.sh
+    brunch lineage_gta2xlwifi-bp2a-userdebug
+```
+
+If everything goes as expected, the resulting TWRP flashable zip should be in `out/target/product/gta2xlwifi/`.
