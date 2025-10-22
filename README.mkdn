@@ -1,4 +1,4 @@
-Unofficial LineageOS 23.0 for Samsung Galaxy Tab A 10.5 (2018) WiFi
+Unofficial crDroid16 for Samsung Galaxy Tab A 10.5 (2018) WiFi
 ===========
 
 How to build
@@ -8,7 +8,7 @@ How to build
 - Clone LineageOS sources:
 
 ```
-    repo init -u https://github.com/UDPSendToFailed/android.git -b lineage-23.0 --git-lfs
+    repo init -u https://github.com/tbd/android.git -b lineage-23.0 --git-lfs
     repo sync
 ```
 
